@@ -1,0 +1,14 @@
+<p>Asistencias</p>
+<ion-list id="ListaPresente">
+    <!--renderizar lista basada en una lista proporcionada en la lógica-->
+    <ion-item *ngFor="let alumno of alumnos" [ngClass]="{'inasistencia': !alumno.presente, 'presente': alumno.presente}">
+        {{alumno.nombre}}
+    </ion-item>
+</ion-list>
+
+<p>Inasistencias</p>
+<ion-list id="ListaAusente">
+    <ion-item *ngFor="let alumno of alumnos" [ngClass]="{'inasistencia': !alumno.presente, 'presente': alumno.presente}">
+        {{alumno.nombre}}
+    </ion-item>
+</ion-list>

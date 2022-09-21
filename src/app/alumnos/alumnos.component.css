@@ -1,0 +1,7 @@
+#ListaAusente .presente{
+    display: none;
+   }
+   
+#ListaPresente .inasistencia{
+    display: none;
+}
