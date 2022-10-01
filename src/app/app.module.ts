@@ -6,12 +6,16 @@ import { AppComponent } from './app.component';
 import { InicioComponent } from './inicio/inicio.component';
 import { AlumnosComponent } from './alumnos/alumnos.component';
 import { IonicModule } from '@ionic/angular';
+import { TabsComponent } from './tabs/tabs.component';
+import { MateriasComponent } from './materias/materias.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     InicioComponent,
-    AlumnosComponent
+    AlumnosComponent,
+    TabsComponent,
+    MateriasComponent
   ],
   imports: [
     BrowserModule,

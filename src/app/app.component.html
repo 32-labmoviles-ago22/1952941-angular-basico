@@ -7,8 +7,18 @@
   </ion-header>
  
   <ion-content class="ion-padding">
+    <p routerLink="/alumnos">Ir a alumnos</p>
     <!--Aqui vamos a insertar nuestro componente alumnos-->
-    <app-alumnos></app-alumnos>
+    <ion-tabs><!--contenedor de pestañas-->
+      <ion-tab-bar> <!--barra al fondo de la pagina-->
+
+        <!--pestañas-->
+        <ion-tab-button tab="alumnos">
+          <ion-label>Asistencia de alumnos</ion-label>
+          <ion-icon name="people"></ion-icon>
+        </ion-tab-button>
+      </ion-tab-bar>
+    </ion-tabs>
   </ion-content>
 </ion-app>
 
