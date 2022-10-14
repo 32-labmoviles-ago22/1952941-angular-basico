@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import{AlertController, ActionSheetController} from '@ionic/angular'
 
 @Component({
   selector: 'app-alumnos',
@@ -7,9 +8,53 @@ import { Component, OnInit } from '@angular/core';
 })
 export class AlumnosComponent implements OnInit {
 
-  constructor() { }
+  constructor(private alertaController: AlertController, private actionSheetController: ActionSheetController) { }
 
   ngOnInit(): void {
+  }
+//promesas en angular
+//async: retorna un objeto, en este caso un alert
+  async mensajeAlerta(tipoMensaje: string){
+    const alerta=this.alertaController.create(
+      {
+        header: 'hola',
+        subHeader: 'este es un mensaje de alerta del tipo '+ tipoMensaje,
+        message: 'haz click en el boton para salir',
+        buttons: ['aceptar']
+      }
+    );
+    (await alerta).present();
+  }
+
+  async abrirActionSheet(){
+    const ActionSheet= await this.actionSheetController.create(
+      {
+        header: 'selecciona una opcion',
+        buttons: [
+          {
+            text: 'borrar',
+            role: 'destructive',
+            data: {
+              action: 'delete'
+            }
+          },
+          {
+            text: 'compartir',
+            data: {
+              action: 'compartir'
+            }
+          },
+          {
+            text: 'cancelar',
+            data: {
+              action: 'cancelar'
+            }
+          }
+        ]
+      }
+    );
+    actionSheet.present();
+    
   }
 
   alumnos: any = [
