@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import{AlertController, ActionSheetController} from '@ionic/angular'
+import { Alumno } from 'src/alumno.model';
 
 @Component({
   selector: 'app-alumnos',
@@ -12,6 +13,11 @@ export class AlumnosComponent implements OnInit {
 
   ngOnInit(): void {
   }
+
+onSubmit(){
+  console.log("se submitio el forms");
+}
+
 //promesas en angular
 //async: retorna un objeto, en este caso un alert
   async mensajeAlerta(tipoMensaje: string){
@@ -53,11 +59,26 @@ export class AlumnosComponent implements OnInit {
         ]
       }
     );
-    actionSheet.present();
-    
+    ActionSheet.present();
   }
 
-  alumnos: any = [
+ 
+
+  nuevoAlumno: Alumno={
+    nombre: '',
+    presente: false
+  }
+
+  agregarAlumno(){
+    console.log("Se submitio formulario");
+    //agregrab alumno 
+    this.alumnos.push(this.nuevoAlumno);
+    }
+
+    
+  
+
+  alumnos: Alumno[] = [
     {
       nombre: "Edgar Efren",
       presente: true

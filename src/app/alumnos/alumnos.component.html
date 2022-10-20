@@ -1,4 +1,18 @@
 <ion-content>
+<form #nuevoAlumnoForm="ngForm" (ngSubmit)="agregarAlumno()">
+    <!--agregar todo aqui-->
+    <ion-label>Nombre: <strong>{{nuevoAlumno.nombre}}</strong></ion-label>
+    <ion-input type="text" placeholder="Ejemplo: Orlando Castillo" [(ngModel)]="nuevoAlumno.nombre" name="nombre"></ion-input>
+    <ion-item>
+        <ion-checkbox name = "presente" slot="start" [(ngModel)]="nuevoAlumno.presente">
+            <ion-label>Presente: <strong> {{nuevoAlumno.presente}}</strong></ion-label>
+        </ion-checkbox>
+        
+    </ion-item>
+    <ion-button class="agregar"  type="submit">Agregar</ion-button>
+</form>
+
+
 <ion-button fill="clear" (click)="abrirActionSheet()">
     <ion-icon name="ellipsis-vertical"></ion-icon>
 </ion-button>
