@@ -23,7 +23,7 @@
         
         <!--label de elemento deslizable-->
         <ion-item>
-            <ion-label>{{alumno.nombre}}</ion-label>  
+            <ion-label [routerLink]="['/alumno', alumno.nombre]">{{alumno.nombre}}</ion-label>  <!--el routerlink pone un link en cada elemnto para ir a la vista de alumnodetalle-->
         </ion-item>
 
         <!--opciones de elemento deslizable-->

@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import{AlertController, ActionSheetController} from '@ionic/angular'
 import { Alumno } from 'src/alumno.model';
+import { ListaAlumnosService } from '../lista-alumnos.service';
 
 @Component({
   selector: 'app-alumnos',
@@ -9,7 +10,8 @@ import { Alumno } from 'src/alumno.model';
 })
 export class AlumnosComponent implements OnInit {
 
-  constructor(private alertaController: AlertController, private actionSheetController: ActionSheetController) { }
+  constructor(private alertaController: AlertController, private actionSheetController: ActionSheetController,
+    private listaAlumnos: ListaAlumnosService ) { }
 
   ngOnInit(): void {
   }
@@ -78,7 +80,7 @@ onSubmit(){
     
   
 
-  alumnos: Alumno[] = [
+  alumnos: Alumno[] = this.listaAlumnos.alumnos /*[
     {
       nombre: "Edgar Efren",
       presente: true
@@ -143,6 +145,6 @@ onSubmit(){
       nombre: "Luis Fernando Camaal",
       presente: true
     }
-  ]
+  ]*/
 
 }

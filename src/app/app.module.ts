@@ -9,6 +9,7 @@ import { IonicModule, IonTabs } from '@ionic/angular';
 import { TabsComponent } from './tabs/tabs.component';
 import { MateriasComponent } from './materias/materias.component';
 import { FormsModule } from '@angular/forms';
+import { AlumnoDetalleComponent } from './alumno-detalle/alumno-detalle.component';
 
 @NgModule({
   declarations: [
@@ -16,7 +17,8 @@ import { FormsModule } from '@angular/forms';
     InicioComponent,
     AlumnosComponent,
     TabsComponent,
-    MateriasComponent
+    MateriasComponent,
+    AlumnoDetalleComponent
   ],
   imports: [
     BrowserModule,
