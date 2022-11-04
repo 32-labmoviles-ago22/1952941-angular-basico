@@ -4,12 +4,22 @@ import { AlumnoDetalleComponent } from './alumno-detalle/alumno-detalle.componen
 import { AlumnosComponent } from './alumnos/alumnos.component';
 import { InicioComponent } from './inicio/inicio.component';
 import { MateriasComponent } from './materias/materias.component';
+import {LoginComponent} from './login/login.component';
 
 const routes: Routes = [
   {
     path: '',
+    redirectTo: 'login',
+    pathMatch: 'full'
+  },
+  {
+    path: '',
     redirectTo: 'inicio',
     pathMatch: 'full'
+  },
+  {
+    path:'login',
+    component: LoginComponent
   },
   {
     path: 'inicio',

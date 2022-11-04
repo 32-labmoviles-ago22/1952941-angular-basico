@@ -8,8 +8,9 @@ import { AlumnosComponent } from './alumnos/alumnos.component';
 import { IonicModule, IonTabs } from '@ionic/angular';
 import { TabsComponent } from './tabs/tabs.component';
 import { MateriasComponent } from './materias/materias.component';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { AlumnoDetalleComponent } from './alumno-detalle/alumno-detalle.component';
+import { LoginComponent } from './login/login.component';
 
 @NgModule({
   declarations: [
@@ -18,11 +19,13 @@ import { AlumnoDetalleComponent } from './alumno-detalle/alumno-detalle.componen
     AlumnosComponent,
     TabsComponent,
     MateriasComponent,
-    AlumnoDetalleComponent
+    AlumnoDetalleComponent,
+    LoginComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
+    ReactiveFormsModule,
     FormsModule,
     IonicModule.forRoot()
     

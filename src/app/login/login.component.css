@@ -1,0 +1,20 @@
+ion-label {
+    font-weight: bold;
+}
+ion-button{
+    --background: magenta;
+}
+
+ion-input.ng-invalid.ng-dirty{
+    border: solid 2px red;
+}
+
+ion-input.ng-valid{
+    border: solid 2px green;
+}
+
+.noSubmit {
+    pointer-events: none;
+    --background: gray;
+    color: white;
+}
